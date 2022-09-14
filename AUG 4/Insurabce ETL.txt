@@ -1,0 +1,3 @@
+wine_df = spark.read.format("jdbc").option("url", "jdbc:mysql://localhost:3306/TestDB") \
+    .option("driver", "com.mysql.jdbc.Driver").option("dbtable", "Wines") \
+    .option("user", "me").option("password", "me").load()

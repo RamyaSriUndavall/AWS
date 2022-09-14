@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<div>
+
+<h1 id="txt">Waiting for response</h1>
+</div>
+<script>
+
+msg = fetch('https://ir893neop1.execute-api.us-east-1.amazonaws.com/default/Function1?name=Ramya')
+
+           .then((response) => response.json())
+
+           .then((data) =>document.getElementById('txt').innerHTML=data )
+           </script>
+</body>
+</html>

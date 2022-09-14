@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div style="background-color: rgb(21, 127, 81);">
+
+        <h1>Message</h1>
+
+        <h2 id="msg">Waiting for message...</h2>
+
+    </div>
+
+    <script>
+
+        console.log('hello')      
+
+        fetch('https://j6l4bwptovkruejzbolslq443q0awmqy.lambda-url.us-east-1.on.aws/')
+
+            .then((response) => response.json())
+
+            .then((data) =>
+
+                    document.getElementById('msg').innerHTML = data)
+
+    </script>
+
+</body>
+</html>
